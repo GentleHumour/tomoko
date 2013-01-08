@@ -12,5 +12,9 @@ Quick Start
     make
     cd ..
     ./tomoko
-    
+
+Tomoko assumes a 32-bit CPU architecture.  It is compiled with "gcc -m32".  On 64-bit systems, you may need to install the 32-bit versions of the glibc and readline libraries.  On my Fedora 14 system:
+
+    yum -y install glibc-devel.i686 readline.i386 readline-devel.i386
+
 Tomoko's input routines don't currently treat backslash comments as special (they are defined as a word), so the long comment on line 22 of jonesforth.f.txt will be treated as an error, but things will work fine anyway.
